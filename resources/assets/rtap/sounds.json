@@ -1,0 +1,12 @@
+{
+    "miscellaneous.armor.bolognaarmorequip": {
+        "category": "player",
+        "subtitile": "miscellaneous.armor.bolognaarmorequip",
+        "sounds": [ 
+            { 
+                "name": "rtap:miscellaneous/armor/bolognaarmorequip",
+                "stream": true
+            } 
+        ]
+    }
+}

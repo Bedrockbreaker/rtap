@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        },
+        {
+            "item": "rtap:itemcathair"
+        }
+    ],
+    "result": {
+        "item": "rtap:blockcathair"
+    }
+}
