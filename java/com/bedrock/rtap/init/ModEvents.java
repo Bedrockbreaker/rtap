@@ -3,10 +3,8 @@ package com.bedrock.rtap.init;
 import com.bedrock.rtap.RTAP;
 
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityOcelot;
-import net.minecraft.entity.passive.EntityTameable;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemShears;
 import net.minecraft.item.ItemStack;
@@ -33,8 +31,6 @@ public class ModEvents {
 			return;
 			
 		}
-		
-		((EntityOcelot) entity).processInteract(player, event.getHand()); {	}
 
 		if ( entity instanceof EntityOcelot && ((EntityOcelot) entity).isSitting() && !entity.isDead && itemstack.getItem() instanceof ItemShears) {
 			
@@ -60,7 +56,7 @@ public class ModEvents {
 				
 			} else {
 			
-				if (100 / ((itemstack.getMaxDamage() / (itemstack.getItemDamage()) + 1) + 1) * Math.random() * 2 >= Math.random() * 50) {
+				if (100 / (((itemstack.getMaxDamage() + 1) / (itemstack.getItemDamage() + 1))) * Math.random() * 2 >= Math.random() * 50) {
 					
 					DamageSource killedByShears = new ModDeath("killedByShears", player);
 					
@@ -69,6 +65,8 @@ public class ModEvents {
 				}
 				
 			}
+			
+			event.setCanceled(true);
 			
 		}
 		
