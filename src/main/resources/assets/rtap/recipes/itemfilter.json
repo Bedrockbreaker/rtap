@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ABA",
+        "CDC",
+        "ABA"
+    ],
+    "key": {
+        "A": {
+            "item": "rtap:itemfilterpart"
+        },
+        "B": {
+            "item": "minecraft:wool",
+            "data": 15
+        },
+        "C": {
+            "item": "minecraft:string"
+        },
+        "D": {
+            "item": "minecraft:iron_bars"
+        }
+    },
+    "result": {
+        "item": "rtap:itemfilterpart"
+    }
+}

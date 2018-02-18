@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "AA",
+        " B",
+        " B"
+    ],
+    "key": {
+        "A": {
+            "item": "rtap:blockcathair"
+        },
+        "B": {
+            "item": "minecraft:stick"
+        }
+    },
+    "result": {
+        "item": "rtap:toolcathairhoe"
+    }
+}
