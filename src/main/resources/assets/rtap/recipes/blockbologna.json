@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        },
+        {
+            "item": "rtap:foodbologna"
+        }
+    ],
+    "result": {
+        "item": "rtap:blockbologna"
+    }
+}

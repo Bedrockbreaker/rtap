@@ -1,0 +1,36 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:foodramencooked"
+        },
+        {
+            "item": "minecraft:leaves",
+            "data": 32767
+        },
+        {
+            "item": "minecraft:ender_eye"
+        },
+        {
+            "item": "minecraft:prismarine_shard"
+        },
+        {
+            "item": "minecraft:emerald"
+        },
+        {
+            "item": "minecraft:speckled_melon"
+        },
+        {
+            "item": "minecraft:magma_cream"
+        },
+        {
+            "item": "minecraft:leather"
+        },
+        {
+            "item": "minecraft:fireworks"
+        }
+    ],
+    "result": {
+        "item": "rtap:foodramenmysterious"
+    }
+}

@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:foodramenspicy"
+        },
+        {
+            "item": "rtap:foodramensweet"
+        },
+        {
+            "item": "rtap:foodramenjello"
+        },
+        {
+            "item": "rtap:foodramenhairy"
+        },
+        {
+            "item": "rtap:foodramenmeaty"
+        },
+        {
+            "item": "rtap:foodramenramen"
+        },
+        {
+            "item": "rtap:foodramenprimal"
+        },
+        {
+            "item": "rtap:foodramenelectronic"
+        },
+        {
+            "item": "rtap:foodramenmysterious"
+        }
+    ],
+    "result": {
+        "item": "rtap:foodramenbalanced"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:blockjello"
+        }
+    ],
+    "result": {
+        "item": "rtap:foodjello",
+        "count": 9
+    }
+}

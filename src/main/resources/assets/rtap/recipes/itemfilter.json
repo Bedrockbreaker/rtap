@@ -11,7 +11,7 @@
         },
         "B": {
             "item": "minecraft:wool",
-            "data": 15
+            "data": 32767
         },
         "C": {
             "item": "minecraft:string"
@@ -21,6 +21,6 @@
         }
     },
     "result": {
-        "item": "rtap:itemfilterpart"
+        "item": "rtap:itemfilter"
     }
 }

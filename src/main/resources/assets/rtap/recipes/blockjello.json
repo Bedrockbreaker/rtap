@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        },
+        {
+            "item": "rtap:foodjello"
+        }
+    ],
+    "result": {
+        "item": "rtap:blockjello"
+    }
+}

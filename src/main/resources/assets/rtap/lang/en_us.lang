@@ -22,7 +22,16 @@ item.itemcathair.name=Cat Hair
 
 item.foodramencold.name=Cold Ramen
 item.foodramencooked.name=Cooked Ramen
-item.foodpeppers.name=Peppers
+item.foodramenspicy.name=Spicy Ramen
+item.foodramensweet.name=Sweet Ramen
+item.foodramenjello.name=Jello Ramen
+item.foodramenhairy.name=Hairy Ramen
+item.foodramenmeaty.name=Meaty Ramen
+item.foodramenramen.name=Ramen Ramen
+item.foodramenprimal.name=Primal Ramen
+item.foodramenelectronic.name=Electronic Ramen
+item.foodramenmysterious.name=Mysterious Ramen
+item.foodramenbalanced.name=Balanced Ramen
 
 #Bologna
 
@@ -31,6 +40,10 @@ item.foodbologna.name=Bologna
 #Jello
 
 item.foodjello.name=Jello
+
+#Misc
+
+item.foodpeppers.name=Peppers
 
 ##Tools
 
@@ -90,17 +103,17 @@ item.armorcathairboots.name=Cat Hair Boots
 
 #Jello
 
-item.armorJellohelmet.name=Jello Helmet
-item.armorJellochestplate.name=Jello Chestplate
-item.armorJelloleggings.name=Jello Leggings
-item.armorJelloboots.name=Jello Boots
+item.armorjellohelmet.name=Jello Helmet
+item.armorjellochestplate.name=Jello Chestplate
+item.armorjelloleggings.name=Jello Leggings
+item.armorjelloboots.name=Jello Boots
 
 #Ramen
 
-item.armorRamenhelmet.name=Ramen Helmet
-item.armorRamenchestplate.name=Ramen Chestplate
-item.armorRamenleggings.name=Ramen Leggings
-item.armorRamenboots.name=Ramen Boots
+item.armorramenhelmet.name=Ramen Helmet
+item.armorramenchestplate.name=Ramen Chestplate
+item.armorramenleggings.name=Ramen Leggings
+item.armorramenboots.name=Ramen Boots
 
 ###Blocks
 
@@ -136,4 +149,5 @@ itemGroup.tab_rtap=Randomer Than a Pickle
 
 ##Ocelot Death
 
-death.attack.killedByShears=%1$s was shaved to death by %2$s
+death.attack.rtap.killedByShears=%1$s was shaven to death
+death.attack.rtap.killedByUnbreakableShears=%1$s seems to hate unbreakable shears

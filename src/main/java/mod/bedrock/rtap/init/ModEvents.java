@@ -1,9 +1,11 @@
 package mod.bedrock.rtap.init;
 
 import mod.bedrock.rtap.RTAP;
-import mod.bedrock.rtap.capabilities.IShave;
-import mod.bedrock.rtap.capabilities.Shave;
+import mod.bedrock.rtap.Reference;
+import mod.bedrock.rtap.misc.deathByShears;
+import mod.bedrock.rtap.misc.deathByUnbreakableShears;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityOcelot;
 import net.minecraft.entity.player.EntityPlayer;
@@ -17,15 +19,14 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.EntityInteract;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import scala.util.Random;
 
+@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class ModEvents {
 	
 	//Event for shearing ocelots. Hopefully.
-	
-	@CapabilityInject(IShave.class)
-	public static final Capability<IShave> SHAVE = null;
 	
 	@SubscribeEvent
 	public static void interact(EntityInteract event) {
@@ -35,61 +36,38 @@ public class ModEvents {
 		Entity entity = event.getTarget();
 		World world = event.getWorld();
 		
+		DamageSource killedByShears = new deathByShears("killedByShears", player);
+		DamageSource killedByUnbreakableShears = new deathByUnbreakableShears("killedByUnbreakableShears", player);
+			
 		if (world.isRemote || itemstack.equals(ItemStack.EMPTY)) {
 			
 			return;
 			
 		}
 
-		if ( entity instanceof EntityOcelot && ((EntityOcelot) entity).isSitting() && !entity.isDead && itemstack.getItem() instanceof ItemShears) {
+		if ( entity instanceof EntityOcelot && ((EntityOcelot) entity).isTamed() && !entity.isDead && itemstack.getItem() instanceof ItemShears) {
 			
-			/*
+			itemstack.damageItem(1, player);
 			
-			if (entity.hasCapability(SHAVE, null)) {
+			if (Math.random() > .9) {
 				
-				hairRegrow = SHAVE.readNBT(IShave.class, null, );
-				
-			} else {
-				
-				
-				
-			}
-			
-			*/
-			
-			if (itemstack.getItemDamage() >= 1) {
-				
-				itemstack.damageItem(2, player);
 				world.spawnEntity(new EntityItem(world, entity.posX, entity.posY, entity.lastTickPosZ, new ItemStack(ModItems.itemcathair)));
-				
-			} else {
-				
-				itemstack.damageItem(1, player);
-				if (Math.random() > .5) {
 					
-					world.spawnEntity(new EntityItem(world, entity.posX, entity.posY, entity.lastTickPosZ, new ItemStack(ModItems.itemcathair)));
-					
-				}
-				
 			}
 			
 			if (itemstack.getMaxDamage() <= -1) {
 				
-				entity.onKillCommand();
+				entity.attackEntityFrom(killedByUnbreakableShears, 999999);
 				
 			} else {
 			
-				if (100 / (((itemstack.getMaxDamage() + 1) / (itemstack.getItemDamage() + 1))) * Math.random() * 2 >= Math.random() * 50) {
-					
-					DamageSource killedByShears = new ModDeath("killedByShears", player);
+				if (((float) itemstack.getItemDamage() / (float) itemstack.getMaxDamage()) >= Math.random()) {
 					
 					entity.attackEntityFrom(killedByShears, 1);
 				
 				}
 				
 			}
-			
-			event.setCanceled(true);
 			
 		}
 		

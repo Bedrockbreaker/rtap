@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:foodramencooked"
+        },
+        {
+            "item": "minecraft:redstone"
+        },
+        {
+            "item": "minecraft:redstone_torch"
+        },
+        {
+            "item": "minecraft:redstone_lamp"
+        },
+        {
+            "item": "minecraft:repeater"
+        },
+        {
+            "item": "minecraft:piston"
+        },
+        {
+            "item": "minecraft:observer"
+        },
+        {
+            "item": "minecraft:comparator"
+        },
+        {
+            "item": "minecraft:lever"
+        }
+    ],
+    "result": {
+        "item": "rtap:foodramenelectronic"
+    }
+}

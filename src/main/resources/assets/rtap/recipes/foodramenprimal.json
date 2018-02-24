@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "rtap:foodramencooked"
+        },
+        {
+            "item": "minecraft:gunpowder"
+        },
+        {
+            "item": "minecraft:rotten_flesh"
+        },
+        {
+            "item": "minecraft:bone"
+        },
+        {
+            "item": "minecraft:spider_eye"
+        },
+        {
+            "item": "minecraft:arrow"
+        },
+        {
+            "item": "minecraft:ender_pearl"
+        },
+        {
+            "item": "minecraft:string"
+        },
+        {
+            "item": "minecraft:slime_ball"
+        }
+    ],
+    "result": {
+        "item": "rtap:foodramenprimal"
+    }
+}

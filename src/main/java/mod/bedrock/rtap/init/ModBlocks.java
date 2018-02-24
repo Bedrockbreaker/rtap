@@ -35,6 +35,7 @@ public class ModBlocks {
 	public final static blockBologna blockbologna = null;
 	public final static blockRamen blockramen = null;
 	public final static blockJello blockjello = null;
+	public final static cropPeppers croppeppers = null;
 	
 	@ObjectHolder("blockFlint")
 	public final static ItemBlock blockFlint = null;
@@ -46,9 +47,6 @@ public class ModBlocks {
 	public final static ItemBlock blockRamen = null;
 	@ObjectHolder("blockJello")
 	public final static ItemBlock blockJello = null;
-	
-	//Crops
-	public static Block croppeppers;
 	
 	@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 	public static class registerBlocks {
@@ -63,6 +61,7 @@ public class ModBlocks {
 			registry.register(new blockBologna());
 			registry.register(new blockRamen());
 			registry.register(new blockJello());
+			registry.register(new cropPeppers());
 			
 		}
 		
@@ -99,16 +98,13 @@ public class ModBlocks {
 	@SideOnly(Side.CLIENT)
 	public static void registerRenders() {
 		
-		//Misc + decor
 		registerRender(blockflint, blockFlint);
-		//Cat Hair
 		registerRender(blockcathair, blockCatHair);
-		//Bologna
 		registerRender(blockbologna, blockBologna);
-		//Ramen
 		registerRender(blockramen, blockRamen);
-		//Jello
 		registerRender(blockjello, blockJello);
+		registerBlockRenderOnly(croppeppers);
+		
 		
 	}
 	
@@ -117,6 +113,13 @@ public class ModBlocks {
 		
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Reference.MOD_ID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
 		ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+		
+	}
+	
+	@SideOnly(Side.CLIENT)
+	private static void registerBlockRenderOnly(Block block) {
+		
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Reference.MOD_ID + ":" + block.getUnlocalizedName().substring(5), "inventory"));
 		
 	}
 	
