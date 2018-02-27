@@ -7,8 +7,10 @@ import com.google.common.collect.Range;
 
 import io.netty.util.internal.ThreadLocalRandom;
 import mod.bedrock.rtap.init.ModItems;
+import mod.bedrock.rtap.init.ModVillageRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.registry.VillagerRegistry.IVillageCreationHandler;
 
 public class Reference {
 	
@@ -19,6 +21,8 @@ public class Reference {
 	
 	public static final String CLIENT_PROXY = "mod.bedrock.rtap.proxy.ClientProxy";
 	public static final String SERVER_PROXY = "mod.bedrock.rtap.proxy.ServerProxy";
+	
+	public final static IVillageCreationHandler MODVILLAGEREGISTER = new ModVillageRegister();
 	
 	public static enum RTAPItems {
 		

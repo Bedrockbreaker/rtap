@@ -1,5 +1,8 @@
 package mod.bedrock.rtap;
 
+import java.util.List;
+import java.util.Random;
+
 import com.google.gson.JsonObject;
 
 import mod.bedrock.rtap.init.ModArmor;
@@ -10,15 +13,23 @@ import mod.bedrock.rtap.init.ModLootTables;
 import mod.bedrock.rtap.init.ModNonCrafting;
 import mod.bedrock.rtap.init.ModSoundHandler;
 import mod.bedrock.rtap.init.ModTools;
+import mod.bedrock.rtap.init.ModVillageRegister;
 import mod.bedrock.rtap.irecipes.sulfur;
 import mod.bedrock.rtap.misc.deathByShears;
+import mod.bedrock.rtap.misc.villageCropPeppers;
 import mod.bedrock.rtap.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.gen.structure.MapGenStructureIO;
+import net.minecraft.world.gen.structure.StructureComponent;
+import net.minecraft.world.gen.structure.StructureVillagePieces.PieceWeight;
+import net.minecraft.world.gen.structure.StructureVillagePieces.Start;
+import net.minecraft.world.gen.structure.StructureVillagePieces.Village;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.common.crafting.IRecipeFactory;
@@ -31,6 +42,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.VillagerRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERISON, acceptedMinecraftVersions = Reference.ACCEPTED_VERSIONS)
 public class RTAP {
@@ -52,6 +64,8 @@ public class RTAP {
 		ModLootTables.registerTables();
 		proxy.init();
 		ModNonCrafting.init();
+		MapGenStructureIO.registerStructureComponent(villageCropPeppers.class, Reference.MOD_ID + ":villageCropPeppers");
+		//VillagerRegistry.instance().registerVillageCreationHandler(Reference.MODVILLAGEREGISTER);
 		//ModSoundHandler.init();
 		
 	}
