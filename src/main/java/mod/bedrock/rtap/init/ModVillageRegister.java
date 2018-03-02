@@ -17,7 +17,7 @@ public class ModVillageRegister implements VillagerRegistry.IVillageCreationHand
 	@Override
 	public StructureVillagePieces.PieceWeight getVillagePieceWeight(Random r, int i) {
 		
-		return new StructureVillagePieces.PieceWeight(villageCropPeppers.class, 5, 1);
+		return new StructureVillagePieces.PieceWeight(villageCropPeppers.class, 5, 3);
 		
 	}
 	

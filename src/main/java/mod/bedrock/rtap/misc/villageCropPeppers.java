@@ -5,6 +5,7 @@ import java.util.Random;
 
 import mod.bedrock.rtap.init.ModBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockBeetroot;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -62,13 +63,13 @@ public class villageCropPeppers extends StructureVillagePieces.House1 {
 			this.boundingBox.offset(0, this.averageGroundLvl - this.boundingBox.maxY + 3, 0);
 			
 		}
-		
+				
 		this.fillWithBlocks(world, sBoundingBox, 0, 0, 0, 12, 3, 8, Blocks.AIR);
 		this.buildStructure(world, r, sBoundingBox);
 		
 		for (int i = 0; i < 13; i++) {
 			
-			for (int j = 0; i < 9; j++) {
+			for (int j = 0; j < 9; j++) {
 				
 				this.clearCurrentPositionBlocksUpwards(world, i, 4, j, sBoundingBox);
 				this.replaceAirAndLiquidDownwards(world, Blocks.DIRT.getDefaultState(), i, -1, j, sBoundingBox);
@@ -95,52 +96,56 @@ public class villageCropPeppers extends StructureVillagePieces.House1 {
         this.fillWithBlocks(world, sBoundingBox, 3, 0, 1, 3, 0, 7, Blocks.WATER);
         this.fillWithBlocks(world, sBoundingBox, 9, 0, 1, 9, 0, 7, Blocks.WATER);
         
-        for (int i = 1; i < 8; i = i + 2) {
+        for (int i = 1; i < 12; i = i + 3) {
         	
         	IBlockState newCrop = getRandomCrop();
         	while ((newCrop == ModBlocks.croppeppers.getDefaultState()) && (world.getBiome(new BlockPos(sBoundingBox.minX, sBoundingBox.minY, sBoundingBox.minZ))) != Biome.getBiome(2)) {
-        		
-        		System.out.println(newCrop + " <= Crop --- Biome => " + world.getBiome(new BlockPos(sBoundingBox.minX, sBoundingBox.minY, sBoundingBox.minZ)));
+
         		newCrop = getRandomCrop();
         		
         	}
         	
-        	this.setBlockState(world, newCrop, i, 1, 1, sBoundingBox);
-        	this.setBlockState(world, newCrop, i, 1, 2, sBoundingBox);
-        	this.setBlockState(world, newCrop, i, 1, 3, sBoundingBox);
-        	this.setBlockState(world, newCrop, i, 1, 4, sBoundingBox);
-        	this.setBlockState(world, newCrop, i, 1, 5, sBoundingBox);
-        	this.setBlockState(world, newCrop, i, 1, 6, sBoundingBox);
-        	this.setBlockState(world, newCrop, i, 1, 7, sBoundingBox);
-        	this.setBlockState(world, newCrop, i, 1, 8, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 1, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 2, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 3, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 4, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 5, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 6, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 7, sBoundingBox);
-        	this.setBlockState(world, newCrop, i + 1, 1, 8, sBoundingBox);
+    		for (int j = 1; j < 8; j++) { //There is Probably a better way to do this.
+    			
+    			if (newCrop != Blocks.BEETROOTS.getDefaultState()) {
+    				
+	        		int age = (int) Math.round(Math.random() * 7);
+	        		IBlockState crop = newCrop.withProperty(BlockCrops.AGE, age);
+	            	this.setBlockState(world, crop, i, 1, j, sBoundingBox);
+	            	
+	            	age = (int) Math.round(Math.random() * 7);
+	        		crop = newCrop.withProperty(BlockCrops.AGE, age);
+	    			this.setBlockState(world, crop, i + 1, 1, j, sBoundingBox);
+	    			
+    			} else { //Stupid Beetroots. >:(
+
+    				int age = (int) Math.round(Math.random() * 3);
+	        		IBlockState crop = newCrop.withProperty(BlockBeetroot.BEETROOT_AGE, age);
+	            	this.setBlockState(world, crop, i, 1, j, sBoundingBox);
+	            	
+	            	age = (int) Math.round(Math.random() * 3);
+	        		crop = newCrop.withProperty(BlockBeetroot.BEETROOT_AGE, age);
+	    			this.setBlockState(world, crop, i + 1, 1, j, sBoundingBox);
+    				
+    			}
+    			
+    		}
         	
         }
-		
+        
 	}
 	
 	public IBlockState getRandomCrop() {
 		
 		int r = (int) Math.round(Math.random() * 5);
-		int age = (int) Math.round(Math.random() * 7);
-		
-		System.out.println("crop: " + r);
-		System.out.println("age: " + age);
-		
+
 		switch (r) {
 		
-		case (1): return Blocks.WHEAT.getDefaultState().withProperty(BlockCrops.AGE, age);
-		case (2): return Blocks.POTATOES.getDefaultState().withProperty(BlockCrops.AGE, age);
-		case (3): return Blocks.CARROTS.getDefaultState().withProperty(BlockCrops.AGE, age);
-		case (4): return Blocks.BEETROOTS.getDefaultState().withProperty(BlockCrops.AGE, age);
-		default : return ModBlocks.croppeppers.getDefaultState().withProperty(BlockCrops.AGE, age);
+		case (1): return Blocks.WHEAT.getDefaultState();
+		case (2): return Blocks.POTATOES.getDefaultState();
+		case (3): return Blocks.CARROTS.getDefaultState();
+		case (4): return Blocks.BEETROOTS.getDefaultState();
+		default : return ModBlocks.croppeppers.getDefaultState();
 		
 		}
 		
@@ -148,7 +153,7 @@ public class villageCropPeppers extends StructureVillagePieces.House1 {
 	
 	public void fillWithBlocks(World world, StructureBoundingBox sBoundingBox, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, Block block) {
 		
-		this.fillWithBlocks(world, sBoundingBox, minX, minY, minZ, maxX, maxY, maxZ, block.getDefaultState(), block.getDefaultState(), false);
+		this.fillWithBlocks(world, sBoundingBox, minX, minY, minZ, maxX, maxY, maxZ, this.getBiomeSpecificBlockState(block.getDefaultState()), block.getDefaultState(), false);
 		
 	}
 

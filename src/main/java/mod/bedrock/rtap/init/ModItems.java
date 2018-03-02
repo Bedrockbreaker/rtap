@@ -29,6 +29,7 @@ import mod.bedrock.rtap.items.itemGelatineWet;
 import mod.bedrock.rtap.items.itemJelloHot;
 import mod.bedrock.rtap.items.itemJelloMix;
 import mod.bedrock.rtap.items.itemLiquidMeat;
+import mod.bedrock.rtap.items.itemSulfur;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Blocks;
@@ -52,7 +53,6 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class ModItems {
 
 	//Misc + crafting
-	//Jello
 	public final static itemLiquidMeat itemliquidmeat = null;
 	public final static itemFilterPart itemfilterpart = null;
 	public final static itemFilter itemfilter = null;
@@ -60,11 +60,10 @@ public class ModItems {
 	public final static itemGelatine itemgelatine = null;
 	public final static itemJelloMix itemjellomix = null;
 	public final static itemJelloHot itemjellohot = null;
-	//Cat Hair
 	public final static itemCatHair itemcathair = null;
+	public final static itemSulfur itemsulfur = null;
 	
 	//Foods
-	//Ramen
 	public final static foodPeppers foodpeppers = null;
 	public final static foodRamenCold foodramencold = null;
 	public final static foodRamenCooked foodramencooked = null;
@@ -78,10 +77,7 @@ public class ModItems {
 	public final static foodRamenElectronic foodramenelectronic = null;
 	public final static foodRamenMysterious foodramenmysterious = null;
 	public final static foodRamenBalanced foodramenbalanced = null;
-	
-	//Bologna
 	public final static foodBologna foodbologna = null;
-	//Jello
 	public final static foodJello foodjello = null;
 	
 	@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
@@ -100,6 +96,7 @@ public class ModItems {
 			registry.register(new itemJelloMix());
 			registry.register(new itemJelloHot());
 			registry.register(new itemCatHair());
+			registry.register(new itemSulfur());
 			registry.register(new foodPeppers());
 			registry.register(new foodRamenCold());
 			registry.register(new foodRamenCooked());
@@ -132,7 +129,6 @@ public class ModItems {
 	public static void registerRenders() {
 		
 		//Misc + crafting
-		//Jello
 		registerRender(itemliquidmeat);
 		registerRender(itemfilterpart);
 		registerRender(itemfilter);
@@ -140,11 +136,10 @@ public class ModItems {
 		registerRender(itemgelatine);
 		registerRender(itemjellomix);
 		registerRender(itemjellohot);
-		//Cat Hair
 		registerRender(itemcathair);
+		registerRender(itemsulfur);
 		
 		//Foods
-		//Ramen
 		registerRender(foodpeppers);
 		registerRender(foodramencold);
 		registerRender(foodramencooked);
@@ -158,9 +153,7 @@ public class ModItems {
 		registerRender(foodramenelectronic);
 		registerRender(foodramenmysterious);
 		registerRender(foodramenbalanced);
-		//Bologna
 		registerRender(foodbologna);
-		//Jello
 		registerRender(foodjello);
 	}
 	

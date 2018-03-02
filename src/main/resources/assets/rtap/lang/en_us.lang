@@ -2,8 +2,6 @@
 
 ##Misc + Crafting
 
-#Jello
-
 item.itemliquidmeat.name=Liquid-y Meat
 item.itemfilterpart.name=Filter Part
 item.itemfilter.name=Filter
@@ -11,14 +9,10 @@ item.itemgelatinewet.name=Unfiltered Gelatine
 item.itemgelatine.name=Gelatine
 item.itemjellomix.name=Jello Mix
 item.itemjellohot.name=Hot Jello
-
-#Cat Hair
-
 item.itemcathair.name=Cat Hair
+item.itemsulfur.name=Sulfur
 
 ##Food
-
-#Ramen
 
 item.foodramencold.name=Cold Ramen
 item.foodramencooked.name=Cooked Ramen
@@ -32,17 +26,8 @@ item.foodramenprimal.name=Primal Ramen
 item.foodramenelectronic.name=Electronic Ramen
 item.foodramenmysterious.name=Mysterious Ramen
 item.foodramenbalanced.name=Balanced Ramen
-
-#Bologna
-
 item.foodbologna.name=Bologna
-
-#Jello
-
 item.foodjello.name=Jello
-
-#Misc
-
 item.foodpeppers.name=Peppers
 
 ##Tools
@@ -117,37 +102,23 @@ item.armorramenboots.name=Ramen Boots
 
 ###Blocks
 
-##Misc + Decor
-
 tile.blockflint.name=Block of Flint
-
-#Cat Hair
-
 tile.blockcathair.name=Block of Cat Hair
-
-#Bologna
-
 tile.blockbologna.name=Block of Bologna
-
-#Ramen
-
 tile.blockramen.name=Block of Ramen
-
-#Jello
-
 tile.blockjello.name=Block of Jello
 
-##Crops
+#Crops
 
 tile.croppeppers.name=Peppers
 
 ###Miscellaneous
 
-##Creative Tab
+#Creative Tab
 
 itemGroup.tab_rtap=Randomer Than a Pickle
 
-##Ocelot Death
+#Ocelot Death
 
 death.attack.rtap.killedByShears=%1$s was shaven to death
 death.attack.rtap.killedByUnbreakableShears=%1$s seems to hate unbreakable shears

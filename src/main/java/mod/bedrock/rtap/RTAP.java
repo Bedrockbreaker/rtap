@@ -65,7 +65,7 @@ public class RTAP {
 		proxy.init();
 		ModNonCrafting.init();
 		MapGenStructureIO.registerStructureComponent(villageCropPeppers.class, Reference.MOD_ID + ":villageCropPeppers");
-		//VillagerRegistry.instance().registerVillageCreationHandler(Reference.MODVILLAGEREGISTER);
+		VillagerRegistry.instance().registerVillageCreationHandler(Reference.MOD_VILLAGE_REGISTER);
 		//ModSoundHandler.init();
 		
 	}
@@ -105,6 +105,7 @@ public class RTAP {
 	 * ~* Make Ocelots when right clicked with shears drop cat hair. Fortune increases chances. Perhaps only when it is tamed. And add a cooldown. ~5 mins. Killing them, tamed or not, will drop cat hair. To add nbt to cats, use something about capabilities.
 	 * - Make ALL Cat Hair Items burnable as fuel. hehehe.
 	 * * Make all recipes use ore dictionary.
+	 * - Add Chocolate-chip-mint-ifier. Instantly makes everything better.
 	 *
 	 */
 	

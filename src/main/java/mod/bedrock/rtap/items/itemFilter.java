@@ -48,7 +48,7 @@ public class itemFilter extends ItemTool {
 	@Override
 	public ItemStack getContainerItem(ItemStack itemStack) {
 
-		ItemStack itemstack = new ItemStack(itemStack.getItem(), 1, itemStack.getItemDamage()+1);
+		ItemStack itemstack = new ItemStack(itemStack.getItem(), 1, itemStack.getItemDamage() + 1);
 		
 		if (itemStack.hasTagCompound()) {
 			
@@ -68,5 +68,5 @@ public class itemFilter extends ItemTool {
 		tooltip.add("Be careful to not break blocks or hit entites with this.");
 		
 	}
-
+	
 }

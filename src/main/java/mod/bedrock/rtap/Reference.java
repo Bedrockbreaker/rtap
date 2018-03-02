@@ -22,12 +22,11 @@ public class Reference {
 	public static final String CLIENT_PROXY = "mod.bedrock.rtap.proxy.ClientProxy";
 	public static final String SERVER_PROXY = "mod.bedrock.rtap.proxy.ServerProxy";
 	
-	public final static IVillageCreationHandler MODVILLAGEREGISTER = new ModVillageRegister();
+	public final static IVillageCreationHandler MOD_VILLAGE_REGISTER = new ModVillageRegister();
 	
 	public static enum RTAPItems {
 		
 		//Misc + Crafting
-		//Jello
 		ITEMLIQUIDMEAT("itemliquidmeat", "itemLiquidMeat"),
 		ITEMFILTERPART("itemfilterpart", "itemFilterPart"),
 		ITEMFILTER("itemfilter", "itemFilter"),
@@ -35,11 +34,10 @@ public class Reference {
 		ITEMGELATINE("itemgelatine", "itemGelatine"),
 		ITEMJELLOMIX("itemjellomix", "itemJelloMix"),
 		ITEMJELLOHOT("itemjellohot", "itemJelloHot"),
-		//Cat Hair
 		ITEMCATHAIR("itemcathair", "itemCatHair"),
+		ITEMSULFUR("itemsulfur", "itemSulfur"),
 		
 		//Foods
-		//Ramen
 		FOODPEPPERS("foodpeppers", "foodPeppers"),
 		FOODRAMENCOLD("foodramencold", "foodRamenCold"),
 		FOODRAMENCOOKED("foodramencooked", "foodRamenCooked"),
@@ -53,9 +51,7 @@ public class Reference {
 		FOODRAMENELECTRONIC("foodramenelectronic", "foodRamenElectronic"),
 		FOODRAMENMYSTERIOUS("foodramenmysterious", "foodRamenMysterious"),
 		FOODRAMENBALANCED("foodramenbalanced", "foodRamenBalanced"),
-		//Bologna
 		FOODBOLOGNA("foodbologna", "foodBologna"),
-		//Jello
 		FOODJELLO("foodjello", "foodJello"),
 		
 		//Tools
